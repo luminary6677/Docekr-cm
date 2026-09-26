@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <style>
+        /* CSS Reset & Variable */
+        :root {
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --text-main: #171717;
+            --text-muted: #737373;
+            --accent: #2563eb;
+            --border: #e5e5e5;
+            --max-width: 768px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 540px;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--text-main);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Projects Section */
+        .projects {
+            margin-bottom: 60px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            transition: border-color 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: #a3a3a3;
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background-color: var(--bg-color);
+            color: var(--text-muted);
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        /* Skills Section */
+        .skills {
+            margin-bottom: 60px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        /* Footer / Contact */
+        footer {
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header & Nav -->
+        <nav>
+            <a href="#" class="logo">Portofolio.</a>
+            <div class="nav-links">
+                <a href="#proyek">Proyek</a>
+                <a href="#keahlian">Keahlian</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Halo, Nama Saya imn.</h1>
+            <p>Saya seorang Front-end Developer yang suka membangun antarmuka web modern dan responsif.</p>
+            <a href="#kontak" class="btn">Hubungi Saya</a>
+        </section>
+
+        <!-- Proyek -->
+        <section id="proyek" class="projects">
+            <h2 class="section-title">Proyek Pilihan</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Financial Dashboard</h3>
+                    <p>Aplikasi pencatatan keuangan pribadi dengan grafik visual dan ringkasan pengeluaran real-time.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keahlian -->
+        <section id="keahlian" class="skills">
+            <h2 class="section-title">Keahlian</h2>
+            <div class="skill-list">
+                <div class="skill-item">HTML5</div>
+                <div class="skill-item">CSS3</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Responsive Design</div>
+                <div class="skill-item">UI/UX Design</div>
+            </div>
+        </section>
+
+        <!-- Footer / Kontak -->
+        <footer id="kontak">
+            <div>
+                <h2 class="section-title">Mari Terhubung</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px;">Tertarik untuk bekerja sama atau ada pertanyaan?</p>
+                <div class="contact-links">
+                    <a href="mailto:email@contoh.com">Email</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Portofolio Saya.
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
